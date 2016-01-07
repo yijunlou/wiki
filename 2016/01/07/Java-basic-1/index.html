@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Jave Basic-（一： 开发环境搭建） | Kepler</title>
+  <meta name="author" content="Aphelou">
+  
+  <meta name="description" content="目录 (Table of Contents)
+Java Basic
+Java SE（J2SE) standard edition
+Java EE（J2EE) enterprise edition环境eclipseJava 的程序运行
+运行在Java虚拟机中
+JVM （Java Virtual Ma">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Jave Basic-（一： 开发环境搭建）"/>
+  <meta property="og:site_name" content="Kepler"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/wiki/atom.xml" title="Kepler" type="application/atom+xml">
+  
+  
+    <link href="/wiki/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/wiki/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/responsive.css" media="screen" type="text/css">  
+  <link rel="stylesheet" href="/wiki/css/sidenav.css" media="screen" type="text/css">  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/wiki/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-71920548-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/wiki/">Kepler</a><span class="split"></span><span class="title">Jave Basic-（一： 开发环境搭建）</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2016-01-07</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
+	<!-- toc -->
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+ 		   generateWikiTOC('.note', '.toc',  2 , 2 );
+		});
+</script>
+  </div><!-- col-md-3 -->
+  
+  
+
+  
+  <div class="col-xs-12 col-sm-9 col-md-9 note">
+	
+
+	  <!-- content -->
+	  <p><strong>目录 (Table of Contents)</strong></p>
+<h1 id="Java_Basic"><a href="#Java_Basic" class="headerlink" title="Java Basic"></a>Java Basic</h1><ul>
+<li>Java SE（J2SE) standard edition</li>
+<li>Java EE（J2EE) enterprise edition<h3 id="u73AF_u5883"><a href="#u73AF_u5883" class="headerlink" title="环境"></a>环境</h3>eclipse<h3 id="Java__u7684_u7A0B_u5E8F_u8FD0_u884C"><a href="#Java__u7684_u7A0B_u5E8F_u8FD0_u884C" class="headerlink" title="Java 的程序运行"></a>Java 的程序运行</h3></li>
+<li>运行在Java虚拟机中</li>
+<li>JVM （Java Virtual Machine）， 是Java运行环境的一部分</li>
+<li>JRE （Java Runtime Environment） Java运行环境<h2 id="JRE_u548CJDK_u4ECB_u7ECD"><a href="#JRE_u548CJDK_u4ECB_u7ECD" class="headerlink" title="JRE和JDK介绍"></a>JRE和JDK介绍</h2></li>
+<li>Jave源代码是*.Java 的纯文本文件，可以任意编写但不能执行</li>
+<li>JDK是Java language developkit，可以将*.Javanese 文件编译为可执行Java程序</li>
+<li>可执行Java陈旭需要JVM才可以运行</li>
+<li>JRE include JVM</li>
+<li>JDK include JRE<h4 id="JRE"><a href="#JRE" class="headerlink" title="JRE"></a>JRE</h4></li>
+<li>JRE (Java Runtime Environment ：运行Java程序必须的环境集合，包含了JVM标准、实现、和核心类库。可以实现Java 运行，不能编译<h4 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h4></li>
+<li>JDK（JavaDevelopment kit）是Java 语言的软件开发工具包（SDK）。是面向Java开发者发布的Java套件</li>
+<li>JDK includes：编译器（Compiler），Jar打包工具，Javadoc文档生成器，Debug调试器、头文件生成器、反汇编器、监控工具等</li>
+<li>JDK中包含了完整的JRE。安装了JDK，不用再安装JRE<br>#Java 环境搭建<h2 id="u5B89_u88C5JDK_26amp_3Beclipse"><a href="#u5B89_u88C5JDK_26amp_3Beclipse" class="headerlink" title="安装JDK&amp;eclipse"></a>安装JDK&amp;eclipse</h2></li>
+<li>安装Java 建议安装jdk-7，别装Jdk8 别问我为啥:laughing:</li>
+<li>安装Eclipse ；记得挑选eclipse for Java，安装完成</li>
+<li>设定制定的workspace 去确定你的工作空间</li>
+<li>编写第一个任务，然后输出 hello world！</li>
+<li>安装eclipse 插件 for example<h2 id="u521B_u5EFA_u548C_u8FD0_u5FC3_u4E00_u4E2AJava_u9879_u76EE"><a href="#u521B_u5EFA_u548C_u8FD0_u5FC3_u4E00_u4E2AJava_u9879_u76EE" class="headerlink" title="创建和运心一个Java项目"></a>创建和运心一个Java项目</h2></li>
+<li>新建一个java Project</li>
+<li>新建一个class 文件</li>
+<li>使用main 语句构成一个可输出的hello word语句<h2 id="Java_u9879_u76EE_u7684_u7ED3_u6784"><a href="#Java_u9879_u76EE_u7684_u7ED3_u6784" class="headerlink" title="Java项目的结构"></a>Java项目的结构</h2></li>
+<li>给项目命名不要再主包下面直接建立class（类），而是使用新的 subpackage</li>
+<li>命名规则：MVC（Model View Control）</li>
+<li>与网站写法反过来：com.youtube.hello.main（表示com是商业应用，youtube是项目名称，hello是子项目，买呢是这个package的作用）</li>
+<li>com.youtube.hello.main其实是放了control的代码；那么下一个可以放view的代码 com.youtube.hello.view；再一个model包com.youtube.hello.view，基本需要有这三个包</li>
+<li>如果项目复杂，会有更多包</li>
+<li>bin 中会有许多.class 文件，是二进制代码，我们不认识，Java认识</li>
+<li>也可以添加lib文件夹</li>
+<li>summary scr是源文件目录，其中包含了许多的包，还可以包含子包，lib是库，reference lib 是引用库<h2 id="Java_u5E93_u7684_u5BFC_u5165_u548C_u5BFC_u51FA"><a href="#Java_u5E93_u7684_u5BFC_u5165_u548C_u5BFC_u51FA" class="headerlink" title="Java库的导入和导出"></a>Java库的导入和导出</h2><blockquote>
+<p>archive file: 压缩文件</p>
+</blockquote>
+</li>
+<li>export 选择general 选择zip 压缩</li>
+<li>同理可以使用inport， copy projects into workspace<h1 id="Java_u5F00_u53D1_u8C03_u8BD5_u6280_u5DE7_u53CAEclipse_u5FEB_u6377_u952E_u4F7F_u7528_u65B9_u6CD5"><a href="#Java_u5F00_u53D1_u8C03_u8BD5_u6280_u5DE7_u53CAEclipse_u5FEB_u6377_u952E_u4F7F_u7528_u65B9_u6CD5" class="headerlink" title="Java开发调试技巧及Eclipse快捷键使用方法"></a>Java开发调试技巧及Eclipse快捷键使用方法</h1><code>System.err.println(&quot;hello&quot;);</code><blockquote>
+<p>Eclipse 快捷操作<br>//大多数快捷键在苹果下对应Cmd 键，在windows 下对应Ctrl 键<br>//CTRL+1快捷修复<br>//Ctrl + D 快捷删除<br> //shift + Enter 在下一行输入<br>// tab 键 ，缩进到下一行<br>// ctrl +F11 快速运行<br>// Alt +上下键 快速移动行<br>// Ctrl + Alt +上下 快速复制行<br>// Ctrl + M 放大输入窗口<br>// Alt + / 补全代码<br>// java doc 的说明 用/**+enter<br>//调节代码字体 ：右键→选择preference→Java editor</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="Java_Eclipse_u96C6_u6210_u5F00_u53D1_u73AF_u5883_u642D_u5EFA_u8BE6_u89E3"><a href="#Java_Eclipse_u96C6_u6210_u5F00_u53D1_u73AF_u5883_u642D_u5EFA_u8BE6_u89E3" class="headerlink" title="Java Eclipse集成开发环境搭建详解"></a>Java Eclipse集成开发环境搭建详解</h1><ul>
+<li>Eclipse 是 开放源代码的、基于Java的可拓展平台</li>
+<li>历史 OTI &amp; IBM</li>
+<li>开放了源码，可以开发插件：目标可以做任何语言开发的IDE</li>
+<li>eclipse 的分支介绍： 标准版的eclipse 标准版+相关插件集</li>
+<li>因此下载时候可以下标准版配置插件也可以直接相关版本<h2 id="MyEclipse__u4ECB_u7ECD"><a href="#MyEclipse__u4ECB_u7ECD" class="headerlink" title="MyEclipse 介绍"></a>MyEclipse 介绍</h2></li>
+<li>企业级工作平台</li>
+<li>MyEclipse 也有不同版本</li>
+<li>衍生版本 ： ADT（Android Developer Tool） 专为Android 开发服务</li>
+</ul>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+		
+			
+			
+		
+	
+		
+		
+	
+	
+	
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/wiki/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next disabled"><a>next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+  &copy; 2016 Aphelou
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/wiki/js/jquery.imagesloaded.min.js"></script>
+<script src="/wiki/js/gallery.js"></script>
+<script src="/wiki/js/bootstrap.min.js"></script>
+<script src="/wiki/js/jquery.tableofcontents.min.js"></script>
+<script src="/wiki/js/tocgenerator.min.js"></script>
+<script src="/wiki/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/wiki/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/wiki/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+</body>
+</html>
