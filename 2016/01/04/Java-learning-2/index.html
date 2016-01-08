@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Java learning（二：Java语言基础） | Kepler Wiki</title>
+  <meta name="author" content="Aphelou">
+  
+  <meta name="description" content="本阶段讲解了Java语言的基本语法，是Java语言的基本知识.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Java learning（二：Java语言基础）"/>
+  <meta property="og:site_name" content="Kepler Wiki"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/wiki/atom.xml" title="Kepler Wiki" type="application/atom+xml">
+  
+  
+    <link href="/wiki/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/wiki/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/sidenav.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/wiki/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-71920548-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/wiki/">Kepler Wiki</a><span class="split"></span><span class="title">Java learning（二：Java语言基础）</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 01-04-2016</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
+	<!-- toc -->
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+ 		   generateWikiTOC('.note', '.toc',  2 , 2 );
+		});
+</script>
+  </div><!-- col-md-3 -->
+  
+  
+
+  
+  <div class="col-xs-12 col-sm-9 col-md-9 note">
+	
+
+	  <!-- content -->
+	  <p>- <a href="http://www.jikexueyuan.com/course/76.html" target="_blank" rel="external">Java语言基础-计算机进制转换：二进制、八进制、十进制、十六</a></p>
+<ul>
+<li><a href="http://www.jikexueyuan.com/course/78.html" target="_blank" rel="external">Java编程基础知识入门:变量与数据类型</a></li>
+<li><a href="http://www.jikexueyuan.com/course/86.html" target="_blank" rel="external">Java判断与关系运算</a></li>
+<li><a href="http://www.jikexueyuan.com/course/94.html" target="_blank" rel="external">Java语言逻辑运算</a></li>
+<li><a href="http://www.jikexueyuan.com/course/99.html" target="_blank" rel="external">Java if判断语句的用法</a></li>
+<li><a href="http://www.jikexueyuan.com/course/85.html" target="_blank" rel="external">Java语言Switch语句详解</a></li>
+<li><a href="http://www.jikexueyuan.com/course/100.html" target="_blank" rel="external">Java循环结构语句的特点和使用方法</a></li>
+<li><a href="http://www.jikexueyuan.com/course/105.html" target="_blank" rel="external">Java数组</a><a id="more"></a>
+<h2 id="Java_u8BED_u8A00_u57FA_u7840-_u8BA1_u7B97_u673A_u8FDB_u5236_u8F6C_u6362"><a href="#Java_u8BED_u8A00_u57FA_u7840-_u8BA1_u7B97_u673A_u8FDB_u5236_u8F6C_u6362" class="headerlink" title="Java语言基础-计算机进制转换"></a>Java语言基础-计算机进制转换</h2></li>
+</ul>
+<hr>
+<ol>
+<li>数制的概念<ul>
+<li>计算机底层是2进制，用Java 是10进制</li>
+<li>十进制 10是基数 10^n n 被称为 权</li>
+<li>同理，2进制 2 是基数，n 是权 逢二进位</li>
+<li>十六进制 0123456789 ABDCEF→ 实际上十六进制是二进制的简写，在Java代码中十六进制数 用 0X或者0x做前缀<br> eg. 0x1000=1×16<sup>3</sup><br> eg. (5E)<sub>16</sub>=(__)<sub>10</sub><br>5×16+14=94</li>
+</ul>
+</li>
+<li>十六进制转换成其他进制<ul>
+<li>（41）<sub>16</sub>=（__）<sub>10</sub><br>   4*16+1</li>
+<li>(41)<sub>16</sub>=(__)<sub>2</sub><br>   4=0100 1=0001<br>   so  (0100 0001)<sub>2</sub></li>
+</ul>
+</li>
+<li>二进制转换为其他进制<ul>
+<li>（10110）<sub>2</sub>=（__）<sub>10</sub><br> 1<em>2^4+1</em>2^2+1*2^1=22</li>
+<li>二进制数转化为16进制数<br>（11010100）<sub>2</sub>=（__）<sub>16</sub><br>四位二进制换成一位的十六进制极客</li>
+</ul>
+</li>
+<li>二进制数转换为8进制数<ul>
+<li>（11111111）<sub>2</sub> = 1<em> 2^7+1</em> 2^6…1* 2^1<br><code>Math.pow(2, 7)</code>即 2^7</li>
+</ul>
+</li>
+<li>十进制转化为2进制 十进制数不断除以2，取余数</li>
+<li>十进制数转化为16进制数，不断取余数在倒序排列</li>
+</ol>
+<h2 id="Java_u8BED_u8A00_u57FA_u7840-_u53D8_u91CF_u4E0E_u6570_u636E_u7C7B_u578B"><a href="#Java_u8BED_u8A00_u57FA_u7840-_u53D8_u91CF_u4E0E_u6570_u636E_u7C7B_u578B" class="headerlink" title="Java语言基础-变量与数据类型"></a>Java语言基础-变量与数据类型</h2><hr>
+<h3 id="1-_u6570_u636E_u7C7B_u578B_u521D_u9636"><a href="#1-_u6570_u636E_u7C7B_u578B_u521D_u9636" class="headerlink" title="1.数据类型初阶"></a>1.<a href="http://www.jikexueyuan.com/course/78_1.html?ss=1" target="_blank" rel="external">数据类型初阶</a></h3><hr>
+<p><strong>本课学习Java中基本的变量类型和变量在堆栈中的分布特点</strong></p>
+<h4 id="u6982_u8FF0"><a href="#u6982_u8FF0" class="headerlink" title="概述"></a>概述</h4><hr>
+<ul>
+<li>Java语言数据类型划分<ol>
+<li>基本数据类型</li>
+<li>引用数据类型</li>
+<li>自定义数据类型</li>
+</ol>
+</li>
+<li>介绍8种基本数据类型，和引用数据类型中的string</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/135897-e7f10b6620fc7e79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="基本数据类型表"></p>
+<h4 id="u6808_u7A7A_u95F4"><a href="#u6808_u7A7A_u95F4" class="headerlink" title="栈空间"></a>栈空间</h4><hr>
+<ul>
+<li>计算机存储数据分为三个部分：寄存器 栈空间 堆空间（寄存器java不能控制）</li>
+<li>栈空间存取数据效率高</li>
+<li>栈空间 的数据 按“先进后出”方式管理</li>
+<li>栈空间存储空间较小，不能大量存放数据</li>
+<li>JVM 将基本类型数据存放在栈空间<br><img src="http://upload-images.jianshu.io/upload_images/135897-8a6fdeb315538d15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="栈空间示意图"></li>
+</ul>
+<h4 id="u5806_u7A7A_u95F4"><a href="#u5806_u7A7A_u95F4" class="headerlink" title="堆空间"></a>堆空间</h4><hr>
+<ul>
+<li>堆空间存取数据的效率最低</li>
+<li>数据存放位置：随机分配</li>
+<li>可以存放大容量数据 字符串 数组等</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/135897-bc98ceab63562acd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="堆空间示意图"></p>
+<h2 id="2-_u53D8_u91CF_u7684_u5B9A_u4E49_u548C_u53D8_u91CF_u4F7F_u7528_u7684_u539F_u56E0"><a href="#2-_u53D8_u91CF_u7684_u5B9A_u4E49_u548C_u53D8_u91CF_u4F7F_u7528_u7684_u539F_u56E0" class="headerlink" title="2.变量的定义和变量使用的原因"></a>2.<a href="http://www.jikexueyuan.com/course/78_2.html?ss=1" target="_blank" rel="external">变量的定义和变量使用的原因</a></h2><hr>
+<p><strong>本课学习变量的定义和变量使用的原因。</strong></p>
+<h3 id="u4EC0_u4E48_u662F_u53D8_u91CF"><a href="#u4EC0_u4E48_u662F_u53D8_u91CF" class="headerlink" title="什么是变量"></a>什么是变量</h3><hr>
+<ul>
+<li>variable &amp; content（变量和常量）</li>
+<li>字面量：variable &amp; content 中储存的具体数据</li>
+</ul>
+<h3 id="u4E3A_u4EC0_u4E48_u4F7F_u7528_u53D8_u91CF"><a href="#u4E3A_u4EC0_u4E48_u4F7F_u7528_u53D8_u91CF" class="headerlink" title="为什么使用变量"></a>为什么使用变量</h3><hr>
+<ul>
+<li>计算机的高级语言普遍使用变量来管理内存中存储的数据<br><img src="http://upload-images.jianshu.io/upload_images/135897-a0b5d9d673b89ce8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="高级语言示意图"></li>
+<li>变量管理引用类型的数据<br><img src="http://upload-images.jianshu.io/upload_images/135897-52fb72e268836702.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ul>
+<h2 id="3-_u53D8_u91CF_u7684_u547D_u540D_u3001_u5B9A_u4E49_u548C_u521D_u59CB_u5316"><a href="#3-_u53D8_u91CF_u7684_u547D_u540D_u3001_u5B9A_u4E49_u548C_u521D_u59CB_u5316" class="headerlink" title="3.变量的命名、定义和初始化"></a>3.<a href="http://www.jikexueyuan.com/course/78_3.html?ss=1" target="_blank" rel="external">变量的命名、定义和初始化</a></h2><hr>
+<p><strong>本课时学习变量命名规范、语法和初始化赋值。</strong></p>
+<h3 id="u53D8_u91CF_u7684_u547D_u540D"><a href="#u53D8_u91CF_u7684_u547D_u540D" class="headerlink" title="变量的命名"></a>变量的命名</h3><hr>
+<p><img src="http://upload-images.jianshu.io/upload_images/135897-3faedb128ab5fa60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="rules"></p>
+<h3 id="u53D8_u91CF_u7684_u5B9A_u4E49"><a href="#u53D8_u91CF_u7684_u5B9A_u4E49" class="headerlink" title="变量的定义"></a>变量的定义</h3><hr>
+<p><img src="http://upload-images.jianshu.io/upload_images/135897-83ce6b9f4de986c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Definition"></p>
+<h3 id="u53D8_u91CF_u7684_u521D_u59CB_u5316"><a href="#u53D8_u91CF_u7684_u521D_u59CB_u5316" class="headerlink" title="变量的初始化"></a>变量的初始化</h3><hr>
+<p><img src="http://upload-images.jianshu.io/upload_images/135897-9a6b75a120e5b73e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="initialize"></p>
+<h2 id="4-_u7528_u53D8_u91CF_u7B80_u5316_u8BA1_u7B97"><a href="#4-_u7528_u53D8_u91CF_u7B80_u5316_u8BA1_u7B97" class="headerlink" title="4.用变量简化计算"></a>4.<a href="http://www.jikexueyuan.com/course/78_4.html?ss=1" target="_blank" rel="external">用变量简化计算</a></h2><p><strong>使用变量简化计算和代码编写复杂度</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/135897-31c7e32069e5b9d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="sample"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/135897-35badc4cf2165b1e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="两种解法"></p>
+<h2 id="5-_u7528_u53D8_u91CF_u4FDD_u5B58_u591A_u79CD_u7C7B_u578B_u7684_u6570_u636E06_3A49"><a href="#5-_u7528_u53D8_u91CF_u4FDD_u5B58_u591A_u79CD_u7C7B_u578B_u7684_u6570_u636E06_3A49" class="headerlink" title="5.用变量保存多种类型的数据06:49"></a>5.<a href="http://www.jikexueyuan.com/course/78_5.html?ss=1" target="_blank" rel="external">用变量保存多种类型的数据</a>06:49</h2><hr>
+<p><strong>使用不同类型的变量保存不同类型数据</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/135897-a9a452b31fb5ef5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="sample 2"><br>分别存放姓名、年龄、性格、gender等</p>
+<blockquote>
+<p>关于‘’和“”的区别<br>java 中，字符型char类型的值用单引号引起来的单个字符，如： <code>char c = &#39;a&#39;</code><br>而Java中的双引号 表示字符串（String）一个或多个字符如 ：<br>      <code>String s = &quot;abc&quot;</code><br>      <code>String s=&quot;a&quot;</code><br>     <code>char c = &#39;a&#39;</code></p>
+</blockquote>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+			
+	
+	
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/wiki/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next"><a href="/wiki/2016/01/04/Java-learning-1/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+   Aphelou &copy; 2016
+  
+       Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.
+</p>
+ </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/wiki/js/jquery.imagesloaded.min.js"></script>
+<script src="/wiki/js/gallery.js"></script>
+<script src="/wiki/js/bootstrap.min.js"></script>
+<script src="/wiki/js/jquery.tableofcontents.min.js"></script>
+<script src="/wiki/js/tocgenerator.min.js"></script>
+<script src="/wiki/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/wiki/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/wiki/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+</body>
+</html>

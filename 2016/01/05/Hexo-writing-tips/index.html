@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo 写作/编辑tips 汇总 | Kepler Wiki</title>
+  <meta name="author" content="Aphelou">
+  
+  <meta name="description" content="1.YAML检测Freemind 主题额外提供了一些新的 front-matter 的选项，利用这些选项可以更好的装饰你的文章。
+
+文件头需要严格符合YAML标准，在每一项后面加空格 如tags: []。如果有多个tags，使用[Java,tech]的样式。
+可以在YAML网站查阅
+description - 在文章顶部插入一段简短的摘要信息
+feature - 为文章添加一张 feature 图片，这张图片将展示在主页的文章列表中
+toc - 生成 table of contents">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Hexo 写作/编辑tips 汇总"/>
+  <meta property="og:site_name" content="Kepler Wiki"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/wiki/atom.xml" title="Kepler Wiki" type="application/atom+xml">
+  
+  
+    <link href="/wiki/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/wiki/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/sidenav.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/wiki/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-71920548-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/wiki/">Kepler Wiki</a><span class="split"></span><span class="title">Hexo 写作/编辑tips 汇总</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 01-05-2016</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
+	<!-- toc -->
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+ 		   generateWikiTOC('.note', '.toc',  2 , 2 );
+		});
+</script>
+  </div><!-- col-md-3 -->
+  
+  
+
+  
+  <div class="col-xs-12 col-sm-9 col-md-9 note">
+	
+
+	  <!-- content -->
+	  <h2 id="1-YAML_u68C0_u6D4B"><a href="#1-YAML_u68C0_u6D4B" class="headerlink" title="1.YAML检测"></a>1.YAML检测</h2><p>Freemind 主题额外提供了一些新的 front-matter 的选项，利用这些选项可以更好的装饰你的文章。</p>
+<ul>
+<li>文件头需要严格符合YAML标准，在每一项后面加空格 如tags: []。如果有多个tags，使用[Java,tech]的样式。</li>
+<li>可以在<a href="http://www.yamllint.com/" target="_blank" rel="external">YAML</a>网站查阅</li>
+<li>description - 在文章顶部插入一段简短的摘要信息</li>
+<li>feature - 为文章添加一张 feature 图片，这张图片将展示在主页的文章列表中</li>
+<li>toc - 生成 table of contents<a id="more"></a>
+<strong> 示例：</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title: Tag Plugins&#10;date: 2014-03-16 10:17:16&#10;tags: plugins&#10;categories: Docs&#10;description: Introduce tag plugins in freemind.&#10;feature: images/tag-plugins/plugins.jpg&#10;toc: true&#10;---</span><br></pre></td></tr></table></figure>
+<h2 id="2-_u6587_u7AE0_u6458_u8981"><a href="#2-_u6587_u7AE0_u6458_u8981" class="headerlink" title="2.文章摘要"></a>2.文章摘要</h2><p>在需要显示摘要的地方添加如下代码即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#20197;&#19978;&#26159;&#25688;&#35201;&#10;&#60;!--more--&#62;&#10;&#20197;&#19979;&#26159;&#20313;&#19979;&#20840;&#25991;</span><br></pre></td></tr></table></figure></p>
+<p>more以上内容即是文章摘要，在主页显示，more以下内容点击『&gt; Read More』链接打开全文才显示。</p>
+<blockquote>
+<p>hexo中所有文件的编码格式均是UTF-8。</p>
+</blockquote>
+<h2 id="2-tag_pluge__u7684_u4F7F_u7528"><a href="#2-tag_pluge__u7684_u4F7F_u7528" class="headerlink" title="2.tag pluge 的使用"></a>2.tag pluge 的使用</h2><p>Freemind 主题提供了丰富的 tag plugins，以充分利用 Bootstrap 的威力。</p>
+<p>在使用这些 tag plugins 之前，你需要先安装 <a href="https://github.com/wzpan/hexo-tag-bootstrap" target="_blank" rel="external">hexo-tag-bootstrap</a> 。在你的 Hexo 博客目录，执行下列命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-tag-bootstrap --save</span><br></pre></td></tr></table></figure>
+<p>然后就可以像使用其他 hexo tag plugins 一样使用这些 Bootstrap tag plugins 了。</p>
+<!-- more -->
+<h2 id="u6587_u672C_u989C_u8272"><a href="#u6587_u672C_u989C_u8272" class="headerlink" title="文本颜色"></a>文本颜色</h2><p>插入一段文本，并用特殊的颜色高亮它。</p>
+<h3 id="u8BED_u6CD5"><a href="#u8BED_u6CD5" class="headerlink" title="语法"></a>语法</h3><!--
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% textcolor [style] %&#125;&#10;  text string&#10;&#123;% endtextcolor %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u793A_u4F8B"><a href="#u793A_u4F8B" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% textcolor muted %&#125;Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.&#123;% endtextcolor %&#125;&#10;&#10;&#123;% textcolor primary %&#125;Nullam id dolor id nibh ultricies vehicula ut id elit.&#123;% endtextcolor %&#125;&#10;&#10;&#123;% textcolor success %&#125;Duis mollis, est non commodo luctus, nisi erat porttitor ligula.&#123;% endtextcolor %&#125;&#10;&#10;&#123;% textcolor info %&#125;Maecenas sed diam eget risus varius blandit sit amet non magna.&#123;% endtextcolor %&#125;&#10;&#10;&#123;% textcolor warning %&#125;Etiam porta sem malesuada magna mollis euismod.&#123;% endtextcolor %&#125;&#10;&#10;&#123;% textcolor danger %&#125;Donec ullamcorper nulla non metus auctor fringilla.&#123;% endtextcolor %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u7ED3_u679C"><a href="#u7ED3_u679C" class="headerlink" title="结果"></a>结果</h3><p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+<p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+<p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+
+<p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+<h2 id="u6309_u94AE_uFF08Buttons_uFF09"><a href="#u6309_u94AE_uFF08Buttons_uFF09" class="headerlink" title="按钮（Buttons）"></a>按钮（Buttons）</h2><p>插入一个按钮，按钮可以带有链接、文本，并可以指定样式。</p>
+<h3 id="u8BED_u6CD5-1"><a href="#u8BED_u6CD5-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn url text [style] %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u793A_u4F8B-1"><a href="#u793A_u4F8B-1" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn http://hahack.com hahack %&#125;&#10;&#10;&#123;% btn http://hahack.com hahack primary %&#125;&#10;&#10;&#123;% btn http://hahack.com hahack success %&#125;&#10;&#10;&#123;% btn http://hahack.com hahack warning %&#125;&#10;&#10;&#123;% btn http://hahack.com hahack danger %&#125;&#10;&#10;&#123;% btn http://hahack.com hahack info %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u7ED3_u679C-1"><a href="#u7ED3_u679C-1" class="headerlink" title="结果"></a>结果</h3><a class="btn btn-default" href="http://hahack.com">hahack</a>
+<a class="btn btn-primary" href="http://hahack.com">hahack</a>
+<a class="btn btn-success" href="http://hahack.com">hahack</a>
+<a class="btn btn-warning" href="http://hahack.com">hahack</a>
+<a class="btn btn-danger" href="http://hahack.com">hahack</a>
+<a class="btn btn-info" href="http://hahack.com">hahack</a>
+<h2 id="u6807_u7B7E_uFF08Labels_uFF09"><a href="#u6807_u7B7E_uFF08Labels_uFF09" class="headerlink" title="标签（Labels）"></a>标签（Labels）</h2><p>插入一个标签，并为其指定文本和样式。</p>
+<h3 id="u8BED_u6CD5-2"><a href="#u8BED_u6CD5-2" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label text [style] %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u793A_u4F8B-2"><a href="#u793A_u4F8B-2" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label default %&#125;&#10;&#10;&#123;% label warinng warning %&#125;&#10;&#10;&#123;% label success success %&#125;&#10;&#10;&#123;% label danger danger %&#125;&#10;&#10;&#123;% label primary primary %&#125;&#10;&#10;&#123;% label info info %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u7ED3_u679C-2"><a href="#u7ED3_u679C-2" class="headerlink" title="结果"></a>结果</h3><span class="label label-default">default</span>
+<span class="label label-warning">warinng</span>
+<span class="label label-success">success</span>
+<span class="label label-danger">danger</span>
+<span class="label label-primary">primary</span>
+<span class="label label-info">info</span>
+<h2 id="u5FBD_u7AE0_uFF08Badges_uFF09"><a href="#u5FBD_u7AE0_uFF08Badges_uFF09" class="headerlink" title="徽章（Badges）"></a>徽章（Badges）</h2><p>插入一个徽章，并为其指定文本。</p>
+<h3 id="u8BED_u6CD5-3"><a href="#u8BED_u6CD5-3" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% badge text %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u793A_u4F8B-3"><a href="#u793A_u4F8B-3" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% badge 42 %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u7ED3_u679C-3"><a href="#u7ED3_u679C-3" class="headerlink" title="结果"></a>结果</h3><span class="badge">42</span>
+<h2 id="u8B66_u62A5_uFF08Alerts_uFF09"><a href="#u8B66_u62A5_uFF08Alerts_uFF09" class="headerlink" title="警报（Alerts）"></a>警报（Alerts）</h2><p>插入一段警报文本信息，并为其指定样式。</p>
+<h3 id="u8BED_u6CD5-4"><a href="#u8BED_u6CD5-4" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% alert [style] %&#125;&#10;   Alert string&#10;&#123;% endalert %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u793A_u4F8B-4"><a href="#u793A_u4F8B-4" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% alert warning %&#125;Best check yo self, you&#39;re not looking too good.&#123;% endalert %&#125;&#10;&#10;&#123;% alert danger %&#125;Change a few things up and try submitting again.&#123;% endalert %&#125;&#10;&#10;&#123;% alert success %&#125;You successfully read this important alert message.&#123;% endalert %&#125;&#10;&#10;&#123;% alert info %&#125;This alert needs your attention, but it&#39;s not super important.&#123;% endalert %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u7ED3_u679C-4"><a href="#u7ED3_u679C-4" class="headerlink" title="结果"></a>结果</h3><div class="alert alert-warning"><i class="fa fa-bell"></i>  Best check yo self, you're not looking too good.</div>
+
+<div class="alert alert-danger"><i class="fa fa-bug"></i>  Change a few things up and try submitting again.</div>
+<div class="alert alert-success"><i class="fa fa-lightbulb-o"></i>  You successfully read this important alert message.</div>
+
+<div class="alert alert-info"><i class="fa fa-info"></i>  This alert needs your attention, but it's not super important.</div> –&gt;
+-->	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+		
+	
+		
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+	
+		
+		
+	
+	
+	
+		<li class="prev"><a href="/wiki/2016/01/06/Hexo-setup/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/wiki/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next disabled"><a>next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+   Aphelou &copy; 2016
+  
+       Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.
+</p>
+ </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/wiki/js/jquery.imagesloaded.min.js"></script>
+<script src="/wiki/js/gallery.js"></script>
+<script src="/wiki/js/bootstrap.min.js"></script>
+<script src="/wiki/js/jquery.tableofcontents.min.js"></script>
+<script src="/wiki/js/tocgenerator.min.js"></script>
+<script src="/wiki/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/wiki/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/wiki/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+</body>
+</html>

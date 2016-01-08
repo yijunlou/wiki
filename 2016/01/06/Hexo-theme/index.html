@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Freemind 主题个性化 | Kepler Wiki</title>
+  <meta name="author" content="Aphelou">
+  
+  <meta name="description" content="本篇是个人配置Freemind 主题的相关情况。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Freemind 主题个性化"/>
+  <meta property="og:site_name" content="Kepler Wiki"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/wiki/atom.xml" title="Kepler Wiki" type="application/atom+xml">
+  
+  
+    <link href="/wiki/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/wiki/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/sidenav.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/wiki/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-71920548-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/wiki/">Kepler Wiki</a><span class="split"></span><span class="title">Freemind 主题个性化</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 01-06-2016</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
+	<!-- toc -->
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+ 		   generateWikiTOC('.note', '.toc',  2 , 2 );
+		});
+</script>
+  </div><!-- col-md-3 -->
+  
+  
+
+  
+  <div class="col-xs-12 col-sm-9 col-md-9 note">
+	
+
+	  <!-- content -->
+	  <h2 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/wzpan/hexo-theme-freemind.git themes/freemind</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="http://www.voidking.com/2015/05/31/deve-hexo-theme-optimize/" target="_blank" rel="external">这一片</a>，我照着做了一遍</li>
+<li>其中添加头像章节看的这里<a href="http://www.bitbug.net/" target="_blank" rel="external">制作icon</a> (教程)[<a href="http://www.jianshu.com/p/73779eacb494" target="_blank" rel="external">http://www.jianshu.com/p/73779eacb494</a>]<br>然后把生成的32*32 的favicon.png 放到 <code>hexo/theme/freemind/source</code>目录下面即可；404 页面也放在这个文件夹下面</li>
+<li>修改页面语言，这里指的是比如按钮里面的文字是中文还是英文之类的<br><code>hexo/_config.yml</code>line10 写上default 则为英语，如果协商zh-CN 则变中文</li>
+<li>新加了几个分栏<br>这个主题需要的格式比较奇怪的，多一个图标项</li>
+<li>每一页的显示文章数目 [参考]<a href="http://www.isetsuna.com/hexo/theme-plugin/" target="_blank" rel="external">http://www.isetsuna.com/hexo/theme-plugin/</a></li>
+<li>部署前先装 deploy plug 否则不成功<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="u7F51_u7AD9_u63D2_u4EF6_Plugins"><a href="#u7F51_u7AD9_u63D2_u4EF6_Plugins" class="headerlink" title="网站插件 Plugins"></a>网站插件 Plugins</h2><ol>
+<li><p>Hexo插件 <a href="https://github.com/hexojs/hexo-livereload" target="_blank" rel="external">Live Reload</a>  (官方插件)  </p>
+<p>Hexo允许在发布之前在本地浏览器进行调试预览，但是如果每次修改都需要反复执行“$ hexo g &amp;&amp; hexo s”估计也很崩溃。Live Reload给力的地方在于它会自动完成上述步骤，要预览的时候直接F5刷新浏览器即可看到修改后的网页效果。当然，如果有时候修改后无法刷新出来的话，那就“$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s”重新来过。</p>
+</li>
+<li><p>添加<a href="https://github.com/wzpan/hexo-tag-bootstrap" target="_blank" rel="external">tag增强插件</a>（强烈推荐）<br><a href="http://wzpan.github.io/hexo-theme-freemind/2014/03/16/tag-plugins-cn/" target="_blank" rel="external">Tag加强的问题</a><br>安装非常检点，只需要一句命令即可，其效果十分<a href="http://wzpan.github.io/hexo-theme-freemind/2014/03/16/tag-plugins/" target="_blank" rel="external">惊艳</a><br><img src="http://ww3.sinaimg.cn/mw690/7176c9b5gw1ezrxta8iumj20ws305kfl.jpg" alt="http://wzpan.github.io/hexo-theme-freemind/2014/03/16/tag-plugins/"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-tag-bootstrap --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><del>添加<a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="external">七牛云同步</a></del></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-tag-bootstrap --save</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><del>关于七牛云的使用</del><del><a href="http://lukang.me/2014/hexo-qiniu.html" target="_blank" rel="external">七牛空间的设置</a></del></p>
+<ul>
+<li>有更好的处理方法了，令人惊艳的<a href="https://chrome.google.com/webstore/detail/%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A/fdfdnfpdplfbbnemmmoklbfjbhecpnhf" target="_blank" rel="external">微博图床</a>！！！</li>
+</ul>
+<ol>
+<li><p><a href="http://lqs.link/2015/08/17/Hexo%203.x%20%E6%8A%93%E5%8F%96%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6/" target="_blank" rel="external">豆瓣标签</a></p>
+<p> [一]安装插件：   </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-douban --save</span><br></pre></td></tr></table></figure>
+<p> [二]添加配置：   </p>
+ <figure class="highlight"><figcaption><span>blog/_config.yml (not blog/themes/yillia/_config.yml), add following lines:```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">``` yml   </span><br><span class="line">plugins:   </span><br><span class="line">- hexo-generator-douban    </span><br><span class="line">douban:  </span><br><span class="line">   user: xxx</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><p><a href="http://freesouls.github.io/2014/11/18/things-on-hexo/" target="_blank" rel="external">Rss</a>和<a href="http://fionat.github.io/blog/2013/10/23/sitemap/" target="_blank" rel="external">sitemap的问题</a>   </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save```   </span><br><span class="line">``` bash</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参考文章<br><a href="http://chitanda.me/2015/11/03/multiple-git-pages-in-one-github-account/" target="_blank" rel="external">1</a><a href="http://zipperary.com/2015/01/16/gitcafe-subdomain/" target="_blank" rel="external">2</a><a href="http://howiefh.github.io/2014/04/20/hexo-optimize-and-my-theme-landscape-f/" target="_blank" rel="external">3</a></p>
+</li>
+</ul>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+		
+	
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+			
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+	
+		
+		
+	
+	
+	
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/wiki/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next"><a href="/wiki/2016/01/06/Hexo-theme-optimize/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+   Aphelou &copy; 2016
+  
+       Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.
+</p>
+ </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/wiki/js/jquery.imagesloaded.min.js"></script>
+<script src="/wiki/js/gallery.js"></script>
+<script src="/wiki/js/bootstrap.min.js"></script>
+<script src="/wiki/js/jquery.tableofcontents.min.js"></script>
+<script src="/wiki/js/tocgenerator.min.js"></script>
+<script src="/wiki/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/wiki/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/wiki/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+</body>
+</html>

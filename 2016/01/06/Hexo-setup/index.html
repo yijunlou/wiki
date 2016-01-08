@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>基于Hexo的博客搭建及部署至Github（GitCafe）pages | Kepler Wiki</title>
+  <meta name="author" content="Aphelou">
+  
+  <meta name="description" content="前言建博客的想法缘来已久，绝非一天两天了。名博阮一峰曾经说过：   
+
+ 喜欢写Blog的人，会经历三个阶段。
+
+第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。
+第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
+第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。
+
+
+实际上，内容的输出才是Blog的核心与王道。在如今渠道如此丰富的业态之下，其实有一方土地给自己一些慰藉也是好的，正如我喜欢记笔记，但是又闲自己的字写得难看一样。希望拜托了书写困境的我在输出和记录的道路上一路顺利，我也很高兴与认识的不认识的朋友分享点滴。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="基于Hexo的博客搭建及部署至Github（GitCafe）pages"/>
+  <meta property="og:site_name" content="Kepler Wiki"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/wiki/atom.xml" title="Kepler Wiki" type="application/atom+xml">
+  
+  
+    <link href="/wiki/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/wiki/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/sidenav.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/wiki/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-71920548-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/wiki/">Kepler Wiki</a><span class="split"></span><span class="title">基于Hexo的博客搭建及部署至Github（GitCafe）pages</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 01-06-2016</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
+	<!-- toc -->
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+ 		   generateWikiTOC('.note', '.toc',  2 , 2 );
+		});
+</script>
+  </div><!-- col-md-3 -->
+  
+  
+
+  
+  <div class="col-xs-12 col-sm-9 col-md-9 note">
+	
+
+	  <!-- content -->
+	  <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>建博客的想法缘来已久，绝非一天两天了。<br>名博<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="external">阮一峰</a>曾经说过：   </p>
+<blockquote>
+<p> 喜欢写Blog的人，会经历三个阶段。</p>
+<ul>
+<li>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</li>
+<li>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</li>
+<li>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</li>
+</ul>
+</blockquote>
+<p>实际上，内容的输出才是Blog的核心与王道。在如今渠道如此丰富的业态之下，其实有一方土地给自己一些慰藉也是好的，正如我喜欢记笔记，但是又闲自己的字写得难看一样。希望拜托了书写困境的我在输出和记录的道路上一路顺利，我也很高兴与认识的不认识的朋友分享点滴。<br><a id="more"></a></p>
+<h2 id="u5C0F_u63D0_u793A_28_u6211_u8D70_u7684_u5F2F_u8DEF_29_uFF1A"><a href="#u5C0F_u63D0_u793A_28_u6211_u8D70_u7684_u5F2F_u8DEF_29_uFF1A" class="headerlink" title="小提示(我走的弯路)："></a>小提示(我走的弯路)：</h2><blockquote>
+<ol>
+<li><strong>所有标点符号都是英文的，所以输入时请切换到英文状态。</strong></li>
+<li><strong>冒号后面一定要有个空格,否则回报错。</strong></li>
+<li><strong>所有文件（不管是以md为后缀的，还是以yml结尾的），都必须转换成UTF-8格式，可以在notepad++的格式里转换下，否则在本地查看（localhost:4000）中会出现乱码。</strong></li>
+<li><strong>文件夹选项中要勾选“显示隐藏的文件”，而下面的“隐藏已知文件类型的扩展名”则不要勾选</strong>。</li>
+<li><strong>最新版Hexo（3.0.0或以上版本）默认未安装hexo-deployer-git插件，即部署（上传）到gitcafe或github要用的插件，所以如果不安装这个插件，就要报错。</strong></li>
+<li><strong>Git Bash右键点击左上角的图标，选择属性，右侧编辑选项中“快速编辑模式”打勾，这是为了在Git Bash中点击右键就能粘贴。</strong></li>
+<li><strong>不建议用默认hexo主题，建议在网上找个其他主题，不仅因为好看，还因为其他主题往往集成了多说、支持中文简体等优势，省去了你自己折腾的时间。</strong></li>
+</ol>
+</blockquote>
+<h2 id="Hexo_u7B80_u4ECB"><a href="#Hexo_u7B80_u4ECB" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><hr>
+<p><strong> 什么是<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>？</strong></p>
+<p>Hexo是一款基于Node.js的静态博客生成程序，作者是台湾的<a href="https://zespia.tw/" target="_blank" rel="external">tommy351</a>。</p>
+<p>tommy351对Hexo的介绍：</p>
+<blockquote>
+<ul>
+<li>超快速度 Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。</li>
+<li>支持 Markdown Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。</li>
+<li>一键部署 只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站。</li>
+<li>丰富的插件 Hexo 拥有强大的插件系统，安装插件可以让 Hexo 支持 Jade, CoffeeScript。</li>
+</ul>
+</blockquote>
+<p><strong> 为什么用Hexo？ </strong></p>
+<ul>
+<li><p><strong>免费</strong></p>
+<p>  可以部署到GitHub、GitCafe、七牛，都是完全免费的。</p>
+</li>
+<li><p><strong>简单</strong></p>
+<p>  比部署WordPress要简单得多，只需要简单几部就能搭建好环境，仅需要记住几条简短的命令、简单的Markdown语法，即可写出精彩的文章。</p>
+</li>
+<li><p><strong>稳定</strong></p>
+<p>  再也不用去操心主机的运维了。</p>
+</li>
+<li><strong>快速</strong></li>
+</ul>
+<p>同时部署到GitHub、GitCafe、七牛，在全球都可获得优秀的访问速度。</p>
+<h2 id="Hexo_uFF1A_u5B89_u88C5_u548C_u914D_u7F6E"><a href="#Hexo_uFF1A_u5B89_u88C5_u548C_u914D_u7F6E" class="headerlink" title="Hexo：安装和配置"></a>Hexo：安装和配置</h2><hr>
+<div class="alert alert-success"><i class="fa fa-lightbulb-o"></i>  这部分主要介绍Hexo如何安装、使用，以及配置文件。</div>
+<h3 id="u8FD0_u884C_u73AF_u5883_u51C6_u5907"><a href="#u8FD0_u884C_u73AF_u5883_u51C6_u5907" class="headerlink" title="运行环境准备"></a>运行环境准备</h3><p>本系列文章以Hexo 3.0.0为例，操作系统为Windows 8.1 Pro VL x64 。</p>
+<p>首先需要安装以下程序：</p>
+<ul>
+<li><p><a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a><br>下载最新版的 Node.js，一路next安装到C盘。</p>
+</li>
+<li><p><a href="http://git-scm.com/" target="_blank" rel="external">Git</a><br>如果是Windows平台，则下载<a href="https://msysgit.github.com" target="_blank" rel="external">msysgit</a>，安装建议勾选Git Bash Here，方便以后的操作，然后一路next即可。</p>
+</li>
+<li><p><a href="https://atom.io/" target="_blank" rel="external">Atom</a>、<a href="http://notepad-plus-plus.org/" target="_blank" rel="external">Notepad++</a> (可选)<br>文本编辑器，用于修改配置文件及写文章。</p>
+</li>
+</ul>
+<h3 id="u5B89_u88C5Hexo"><a href="#u5B89_u88C5Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><ol>
+<li>新建一个文件夹，例如<code>blog</code>  。</li>
+<li>进入blog文件夹，右键点击<code>Git Bash Here</code>。</li>
+<li><p>安装Hexo<br>输入代码    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化blog文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装依赖和插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动服务器进行本地预览</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>当看到<code>INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</code>时就说明我们已经搭建起本地的hexo博客了，<br>在浏览器中打开 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> <strong>注意：不要打开提示的0.0.0.0:4000</strong>。， 成功的话即可看到博客页面，至此安装就完成了。<br><img src="http://7xptvb.com1.z0.glb.clouddn.com/static%2Fimages%2F%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20160106202247.png" alt=""></p>
+</li>
+<li><p>然后回到命令窗口按Ctrl+C停止服务（有时要按两次Ctrl+C，因为有时Git Bash认为当前在进行复制操作），直到出现 “$”标志就结束了。 然后关闭Git Bash.<br>然后回到命令窗口按Ctrl+C停止服务（有时要按两次Ctrl+C，因为有时Git Bash认为当前在进行复制操作），直到出现 “$”标志就结束了。<br>然后关闭Git Bash.</p>
+</li>
+<li><p>安装插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save<span class="string">''</span><span class="string">'</span><br><span class="line"></span><br><span class="line">#### 常用命令</span><br><span class="line">Hexo的命令极简单，安装后只需要记住四个常用的即可。执行命令需要Git当前处于blog文件夹根目录下。</span><br><span class="line"></span><br><span class="line">* generate 生成静态文件。</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>hexo g<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* server &#21551;&#21160;&#26381;&#21153;&#22120;&#12290;</span><br></pre></td></tr></table></figure></p>
+<p>hexo s<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* deploy &#37096;&#32626;&#32593;&#31449;&#12290;&#37096;&#32626;&#32593;&#31449;&#21069;&#65292;&#38656;&#35201;&#39044;&#20808;&#29983;&#25104;&#38745;&#24577;&#25991;&#20214;&#12290;</span><br></pre></td></tr></table></figure></p>
+<p>hexo d<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* clean &#28165;&#38500;&#32531;&#23384;&#25991;&#20214; (db.json) &#21644;&#24050;&#29983;&#25104;&#30340;&#38745;&#24577;&#25991;&#20214; (public)&#12290;</span><br></pre></td></tr></table></figure></p>
+<p>hexo clean<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### &#20854;&#20182;&#10;* Q&#65306;&#22914;&#20309;&#21368;&#36733;Hexo&#65311;   &#10;A&#65306;3.0.0&#29256;&#26412;&#25191;&#34892;`$ npm uninstall hexo-cli -g`&#65292;&#20043;&#21069;&#29256;&#26412;&#25191;&#34892;`$ npm uninstall hexo -g`&#12290;&#10;* Q&#65306;&#22914;&#20309;&#23433;&#35013;&#26087;&#29256;&#26412;Hexo&#65311;    &#10;  A&#65306;&#20808;&#21368;&#36733;&#24403;&#21069;&#29256;&#26412;&#65292;&#20197;2.8.3&#20026;&#20363;&#65292;&#25191;&#34892;`npm install hexo@2.8.3 -g`&#65292;&#20877;&#21021;&#22987;&#21270;&#24182;&#23433;&#35013;&#20381;&#36182;&#21644;&#25554;&#20214;&#12290;&#10;&#10;### &#37197;&#32622;gitcafe&#10;---------&#10;&#62;&#27880;&#24847;&#65306;&#20197;&#19979;&#20551;&#35774;&#20320;&#30340;gitcafe&#36134;&#21495;&#25110;&#32773;&#29992;&#25143;&#21517;&#26159;&#65306;`hello`&#65292;&#20320;&#30340;&#37038;&#31665;&#20026;&#65306;`hello@gmail.com`&#65292;&#23494;&#30721;&#20026;`hello123`&#10;&#10;&#10;----------&#10;&#10;&#10;&#21040; [https://gitcafe.com][6] &#27880;&#20876;&#20010;&#36134;&#21495;&#65292;&#28982;&#21518;&#21019;&#24314;&#39033;&#30446;&#65292;&#21491;&#19978;&#35282;&#30340;&#37027;&#20010;&#22270;&#26631;&#21487;&#20197;&#26032;&#24314;&#39033;&#30446;&#65292;&#21491;&#20391;&#20063;&#26377;&#8220;&#26032;&#24314;&#8221;&#23383;&#26679;&#12290;&#10;&#20961;&#26159;&#36873;&#22635;&#30340;&#21487;&#20197;&#19981;&#22635;&#65292;&#20854;&#20182;&#40664;&#35748;&#12290;&#10;&#10;&#10;&#62;**&#27880;&#24847;&#65306;&#39033;&#30446;&#21517;&#38656;&#35201;&#19982;&#20320;&#30340;&#29992;&#25143;&#21517;&#30456;&#21516;&#65292;&#36824;&#26377;&#23601;&#26159;&#35201;&#36873;&#25321;&#8220;&#20844;&#24320;&#39033;&#30446;&#8221;&#12290;**&#10;&#10;&#19979;&#22270;&#26159;&#21035;&#20154;&#30340;&#22270;&#29255;&#65292;&#34429;&#28982;&#29992;&#25143;&#21517;&#65288;&#39033;&#30446;&#21517;&#65289;&#19981;&#26159;hello&#65292;&#20294;&#23454;&#38469;&#25805;&#20316;&#26102;&#27880;&#24847;&#39033;&#30446;&#21517;&#31216;&#35201;&#21644;&#27880;&#20876;ID&#19968;&#26679;&#65292;&#39033;&#30446;&#20027;&#39029;&#21487;&#20197;&#19981;&#22635;&#12290;&#10;![gitcaf&#39033;&#30446;][7]&#10;&#10;&#10;### &#37197;&#32622;SSH&#20844;&#38053;&#10;&#39318;&#20808;&#25105;&#20204;&#38656;&#35201;&#26816;&#26597;&#20320;&#30005;&#33041;&#19978;&#29616;&#26377;&#30340;ssh key&#65306;&#10;&#10;``` bash&#10;cd ~/.ssh</span><br></pre></td></tr></table></figure></p>
+<p>如果提示：No such file or directory 说明你是第一次使用git。</p>
+<h3 id="u751F_u6210_u65B0_u7684SSH_Key"><a href="#u751F_u6210_u65B0_u7684SSH_Key" class="headerlink" title="生成新的SSH Key"></a>生成新的SSH Key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"hello@gmail.com"</span></span><br><span class="line"></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;回车就好&gt;</span><br></pre></td></tr></table></figure>
+<p>出现<br><img src="http://images.cnitblog.com/blog/282019/201409/091222268402433" alt="sshkeygen"></p>
+<p>然后系统会要你输入密码：</p>
+<pre><code>Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+</code></pre><p>这个设置是防止别人往你的项目里提交内容，我直接回车。</p>
+<p>看到入下图所示后，SSH key就生成成功了。<br><img src="http://cnfeat.qiniudn.com/11.png" alt="sshkeyok"></p>
+<p>然后你可以去开始，打开你的用户目录，有一个“.ssh”文件夹，里面有<br>“id_rsa” “id_rsa.pub” 和 “known_hosts”这三个文件。<br><img src="http://images.cnitblog.com/blog/541485/201307/02231907-ad2d073fc9a44ba4ac65f38ac575b156.png" alt="ssh文件"><br>其中“id_rsa”是你的私钥文件，“id_rsa.pub”是你的公钥文件，一会儿要用。<br>接下来下载notepad++ 文本编辑器，比windows自带的记事本更强大，这里我们主要用它来打开id_rsa.pub文件。<br>这是他的官网：<a href="http://notepad-plus-plus.org/" target="_blank" rel="external">notepad++官网</a><br>下载后，直接把“id_rsa.pub”文件拖进notepad++中，然后复制里面的所有内容到剪贴板。</p>
+<h3 id="u6DFB_u52A0SSH_Key_u5230Gitcafe"><a href="#u6DFB_u52A0SSH_Key_u5230Gitcafe" class="headerlink" title="添加SSH Key到Gitcafe"></a>添加SSH Key到Gitcafe</h3><p>然后去GitCafe，点击右上角的那个图标，选择账户设置，左侧SSH公钥管理，添加新的公钥，在名称文本框中输入任意字符，在公钥文本框粘贴刚才复制的公钥字符串<strong>全部内容</strong>（包括结尾的邮箱），输入GitCafe账户密码，按保存按钮完成操作。<br><img src="http://haos.qiniudn.com/images/blog/Ashampoo_Snap_2014.09.18_21h48m20s_008_.png" alt=""><br>这样我们本地就和GitCafe服务端连接上了。</p>
+<h3 id="u6D4B_u8BD5_u662F_u5426_u53EF_u4EE5_u8FDE_u63A5GitCafe_u670D_u52A1_u5668"><a href="#u6D4B_u8BD5_u662F_u5426_u53EF_u4EE5_u8FDE_u63A5GitCafe_u670D_u52A1_u5668" class="headerlink" title="测试是否可以连接GitCafe服务器"></a>测试是否可以连接GitCafe服务器</h3><p>在桌面上双击打开Git Bash，输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@gitcafe.com</span><br></pre></td></tr></table></figure>
+<p>如果是第一次连接的话，会出现:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host <span class="string">'gitcafe.com (50.116.2.223)'</span> can<span class="string">'t be established.</span><br><span class="line">#RSA key fingerprint is 84:9e:c9:8e:7f:36:28:08:7e:13:bf:43:12:74:11:4e.</span><br><span class="line">#Are you sure you want to continue connecting (yes/no)?</span></span><br></pre></td></tr></table></figure>
+<p>直接输入yes回车,然后会提示你输入 passphrase 口令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase <span class="keyword">for</span> key ‘/c/Users/USERNAME/.ssh/id_rsa’:</span><br></pre></td></tr></table></figure>
+<p>刚才我们根本就没设置，所以这次也直接回车,当看到</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi starsky! You<span class="string">'ve successfully authenticated, but GitCafe does not provide shell access.</span></span><br></pre></td></tr></table></figure>
+<p>我们就连接成功了。<br><img src="http://haos.qiniudn.com/images/blog/Ashampoo_Snap_2014.09.18_17h30m36s_001_.png" alt=""></p>
+<h3 id="u8BBE_u7F6E_u7528_u6237_u4FE1_u606F"><a href="#u8BBE_u7F6E_u7528_u6237_u4FE1_u606F" class="headerlink" title="设置用户信息"></a>设置用户信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置你的用户名</span></span><br><span class="line">git config --global user.name <span class="string">"hello"</span>  </span><br><span class="line"><span class="comment"># 设置你的邮箱</span></span><br><span class="line">git config --global user.email <span class="string">"hello@gmail.com"</span></span><br></pre></td></tr></table></figure>
+<p>到此为止，SSH Key配置成功，本机已成功连接到gitcafe.<br>就差最后一步了，把博客部署到gitcafe.</p>
+<h3 id="u4FEE_u6539hexo_u914D_u7F6E_u6587_u4EF6"><a href="#u4FEE_u6539hexo_u914D_u7F6E_u6587_u4EF6" class="headerlink" title="修改hexo配置文件"></a>修改hexo配置文件</h3><p>在 Hexo 文件夹下找到 _config.yml 文件，并拖到notepad++ 打开。<br><img src="http://7xi78f.com1.z0.glb.clouddn.com/9.png" alt=""><br>找到其中的 deploy 标签，改成下图所示，并保存：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: https://gitcafe.com/hello/hello.git</span><br><span class="line">  branch: gitcafe-pages</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>注意：除了 “https://” 中的冒号以外，其他每个冒号后面都有个空格,最后保存。</strong></p>
+</blockquote>
+<h3 id="u628Ahexo_u535A_u5BA2_u90E8_u7F72_u5230gitcafe"><a href="#u628Ahexo_u535A_u5BA2_u90E8_u7F72_u5230gitcafe" class="headerlink" title="把hexo博客部署到gitcafe"></a>把hexo博客部署到gitcafe</h3><blockquote>
+<p><strong>注意：以下假设你注册gitcafe时使用的密码是<code>hello123</code></strong></p>
+</blockquote>
+<p>打开我的电脑，进入D盘的hexo目录，在该目录内右键，选择Git Bash，打开后看到Git Bash标题栏的路径为/D/hexo.</p>
+<blockquote>
+<p><strong>注意：以后我们很多的博客操作都要在此目录下运行Git Bash才行，比如新建博文、上传部署等等。</strong></p>
+</blockquote>
+<p>输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>运行中要输入你的用户名：输入<code>hello</code>，回车，然后要输入密码，输入<code>hello123</code>（这时当你输入时，你会发现输入之后密码是不显示的，也不显示星号，这是为了安全，并非是你没输上），回车后显示Deploy done等等就成功部署上了！如图：<br><img src="http://7xi78f.com1.z0.glb.clouddn.com/9-3.png" alt=""></p>
+<p>如果出错改成下面的代码试一下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@gitcafe.com:hello/hello.git</span><br><span class="line">  branch: gitcafe-pages</span><br></pre></td></tr></table></figure></p>
+<h3 id="u6BCF_u6B21deploy_u65F6_u4E0D_u8F93_u5165_u90AE_u7BB1_u548C_u5BC6_u7801"><a href="#u6BCF_u6B21deploy_u65F6_u4E0D_u8F93_u5165_u90AE_u7BB1_u548C_u5BC6_u7801" class="headerlink" title="每次deploy时不输入邮箱和密码"></a>每次deploy时不输入邮箱和密码</h3><p>如果觉得每次部署的时候都要输入用户名和密码，可以这样解决：开始，到你的用户目录下新建一个<code>_netrc</code>文件。<br>我的操作：可以直接复制一个<code>.gitconfig</code>文件复件，然后改名为<code>_netrc</code>，<strong>注意：n前面有个下划线。</strong><br>然后把<code>_netrc</code>文件拖入notepad++ 里，输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">machine gitcafe.com</span><br><span class="line">login hello</span><br><span class="line">password hello123</span><br></pre></td></tr></table></figure>
+<p>，这样每次部署的时候就不用输入用户名和密码了。<br>来源：<br><a href="http://xote.tk/9.html" target="_blank" rel="external">把Hexo同时部署到GitHub和GitCafe</a><br><a href="http://zipperary.com/2013/05/26/ssh-errors-with-github/" target="_blank" rel="external">Git push时重复输入用户名密码的问题</a></p>
+<h2 id="u5927_u529F_u544A_u6210__uFF1A_uFF09"><a href="#u5927_u529F_u544A_u6210__uFF1A_uFF09" class="headerlink" title="大功告成 ：）"></a>大功告成 ：）</h2><p>这时你就成功把hexo博客部署到了gitcafe上，快打开 <a href="http://hello.gitcafe.io/" target="_blank" rel="external">http://hello.gitcafe.io/</a> 看看吧！</p>
+<p>最后的最后，别忘了最最重要的一件事，现在，跟着我一起做，闭上双眼，双手合十，心里默念：感谢<a href="https://gitcafe.com" target="_blank" rel="external">GitCafe</a>！！！</p>
+<h3 id="u5176_u4ED6_u95EE_u9898"><a href="#u5176_u4ED6_u95EE_u9898" class="headerlink" title="其他问题"></a>其他问题</h3><p>问题集1:</p>
+<blockquote>
+<ol>
+<li>有网友反应右键菜单中没有git bash选项，可以进入开始菜单找到git bash，然后通过cd进入相应目录执行命令。</li>
+</ol>
+<ol>
+<li>在github部署完成之后，马上访问可能出现404错误，这是正常的，（最多）等待十分钟左右就可以访问了。如果还不行，那很可能是 github 发送给你的验证邮件你没有打开看，据多方反映，验证后就没问题了。</li>
+<li>如果在hexo d之后出现fatal: ‘username.github.io’ does not appear to be a git repository，一是检查 repo 的名字是否合乎规范、是否含有大写字母、config.yml 中的 deploy 配置是否正确，二是把 git bash 关掉，重新打开再执行命令。</li>
+<li>有的同学可能不是 IT 界的，或者对shell 命令不太了解。在要求输入密码时，你输入之后密码是不显示的，这是为了安全，并非是你没输上。</li>
+<li>出现乱码的，不要使用 windows 中的「记事本」打开并编辑文件，推荐使用 sublime text，很简单。如果已经在「记事本」中编辑过，需要使用 sublime text 转码为「utf8」。</li>
+<li>安装 hexo 时卡在那儿不动，很可能是网络不给力，能全局 break wall 就好了。</li>
+<li>遇到什么其他的问题，不妨删除.deploy 和db.json 再重新生成试一试。</li>
+</ol>
+</blockquote>
+<p>来源：<a href="http://zipperary.com/2013/05/28/hexo-guide-2/" target="_blank" rel="external">hexo系列教程：（二）搭建hexo博客</a></p>
+<p>问题集2:</p>
+<blockquote>
+<p>1.安装NoteJs，出现问题，安装到最后提示error 52**<br>    过程：重新下载安装了几次都不行，不懂为什么，最后通过Hexo的文档提供下载地址进行下载，然后安装问题就没有出现了。 可能原因：<br>    a.下载的安装包有问题的原因<br>    b.我的C盘占用过多，盘符标红，然后卸载一些不常用软件解决，再安装再加上上面重新下载的安装包，之后安装成功。</p>
+<p>2.部署提示找不到git<br>解决办法： 在Hexo 3.0版本后deploy git 被分开的，所以需要安装，安装命令如下:npm install hexo-deployer-git –save ,安装好后在尝试一下就ok。</p>
+<p>3.部署提示 ｀event type error <em>*</em>｀<br>解决办法：<br>安装了git bash没有配置到环境变量path中，添加进去在试试。</p>
+<p>4.部署的时候执行：hexo deploy 命令行没有任何输出，也没有错误。<br>解决办法：<br>在部署的_config.yml文件中，找到deploy:标签，在每个冒号后面必须要空格，否则就会出现上述问题。我的配置如下：<br>   deploy:<br>   type: git<br>  repository: <a href="https://github.com/wx962464/wx962464.github.io.git" target="_blank" rel="external">https://github.com/wx962464/wx962464.github.io.git</a><br>   branch: master<br>顺便提示下，如果使用ssh部署不成功的话，请使用https的方式试试，这个就是每次会让你输入用户名和密码。其实效果是一样的。</p>
+<p>5.修改主题不起作用，而且hexo generate还报错<br>解决办法：<br>需要到相应的主题文件夹下面进行修改，比如我的主题为：themes\jacman 则在根目录下找到该文件夹下，修改_config.yml文件，根目录下面也有个同样的名字，不注意，容易弄混，要主要修改的文件是否正确。</p>
+<p>6.执行hexo server显示running at <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a><br>问题说明：<br>开始的时候以为启动服务器有问题，一直在找问题，找了半天没有答案，最后在浏览器直接尝试<a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a> 是没办法访问的，然后就试了下<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 发现是可以访问的，大喜！~~</p>
+<p>7.执行hexo server提示找不到该指令<br>解决办法：<br>在Hexo 3.0 后server被单独出来了，需要安装server，安装的命令如下：npm install hexo-server –save 安装此server后再试，问题解决。</p>
+<p>8.以上就是我在这几天使用Hexo的一些问题，当然问题列的不够详细，只是一个大致思路，这些也是凭着自己的印象做的笔记，所以有些错误的地方希望大家指出，共同学习，共同进步！</p>
+</blockquote>
+<p>来源：<a href="http://blog.csdn.net/wx_962464/article/details/44786929" target="_blank" rel="external">Hexo 使用中遇到的问题总结</a></p>
+<hr>
+<h3 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></li>
+<li><a href="http://www.sumrday.com/2014/09-18-Hello-Hexo.html" target="_blank" rel="external">将Hexo部署到GitCafe</a></li>
+<li><a href="http://zipperary.com/2013/05/28/hexo-guide-2/" target="_blank" rel="external">hexo系列教程</a></li>
+<li><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a></li>
+<li><a href="http://www.isetsuna.com/hexo/install-config/" target="_blank" rel="external">Hexo博客系列</a></li>
+<li><a href="http://blog.magiclin.com/2013/12/20/hexo-gitcafe/" target="_blank" rel="external">部署Hexo静态blog到gitcafe</a></li>
+<li><a href="http://yangruihan.com/categories/%E6%95%99%E7%A8%8B/" target="_blank" rel="external">Windows下一步步搭建自己的独立博客——使用 GitHub Pages + Hexo 基础教程</a></li>
+<li><a href="http://smyh.me/2014/11/04/2014-11/%E4%BD%BF%E7%94%A8Hexo%E5%8F%91%E8%A1%A8%E5%8D%9A%E6%96%87%E7%9A%84%E6%95%B4%E7%90%86/" target="_blank" rel="external">使用Hexo发表博文的整理</a></li>
+</ul>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+		
+	
+		
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+			
+		
+		
+	
+		
+		
+	
+	
+	
+		<li class="prev"><a href="/wiki/2016/01/06/Hexo-theme-optimize/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/wiki/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next"><a href="/wiki/2016/01/05/Hexo-writing-tips/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+   Aphelou &copy; 2016
+  
+       Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.
+</p>
+ </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/wiki/js/jquery.imagesloaded.min.js"></script>
+<script src="/wiki/js/gallery.js"></script>
+<script src="/wiki/js/bootstrap.min.js"></script>
+<script src="/wiki/js/jquery.tableofcontents.min.js"></script>
+<script src="/wiki/js/tocgenerator.min.js"></script>
+<script src="/wiki/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/wiki/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/wiki/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+</body>
+</html>

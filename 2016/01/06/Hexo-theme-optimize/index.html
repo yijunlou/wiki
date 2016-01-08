@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo 主题安装与优化 | Kepler Wiki</title>
+  <meta name="author" content="Aphelou">
+  
+  <meta name="description" content="前言Hexo 的默认主题看起来还是太过简约了，也不太符合我的口味。很自然的便找起了主题。Hexo 的主题可以在Hexo.io看到许多优秀的模板。Hexo作为blog届的后起之秀，繁荣发展之势可见一斑！我选择了yilia，简洁大气！
+主题使用1. 安装1git clone https://github.com/wzpan/hexo-theme-freemind.git themes/freemind">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Hexo 主题安装与优化"/>
+  <meta property="og:site_name" content="Kepler Wiki"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/wiki/atom.xml" title="Kepler Wiki" type="application/atom+xml">
+  
+  
+    <link href="/wiki/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/wiki/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/sidenav.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/wiki/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-71920548-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/wiki/">Kepler Wiki</a><span class="split"></span><span class="title">Hexo 主题安装与优化</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 01-06-2016</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
+	<!-- toc -->
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+ 		   generateWikiTOC('.note', '.toc',  2 , 2 );
+		});
+</script>
+  </div><!-- col-md-3 -->
+  
+  
+
+  
+  <div class="col-xs-12 col-sm-9 col-md-9 note">
+	
+
+	  <!-- content -->
+	  <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>Hexo 的默认主题看起来还是太过简约了，也不太符合我的口味。很自然的便找起了主题。Hexo 的主题可以在<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">Hexo.io</a>看到许多优秀的模板。Hexo作为blog届的后起之秀，繁荣发展之势可见一斑！<br>我选择了<a href="http://litten.github.io/2014/08/31/hexo-theme-yilia/" target="_blank" rel="external">yilia</a>，简洁大气！</p>
+<h2 id="u4E3B_u9898_u4F7F_u7528"><a href="#u4E3B_u9898_u4F7F_u7528" class="headerlink" title="主题使用"></a>主题使用</h2><h3 id="1-__u5B89_u88C5"><a href="#1-__u5B89_u88C5" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/wzpan/hexo-theme-freemind.git themes/freemind</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="2-__u914D_u7F6E"><a href="#2-__u914D_u7F6E" class="headerlink" title="2. 配置"></a>2. 配置</h3><p>修改hexo根目录下的 <code>_config.yml</code> ： <code>theme: yilia</code></p>
+<h3 id="3-__u66F4_u65B0"><a href="#3-__u66F4_u65B0" class="headerlink" title="3. 更新"></a>3. 更新</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes/yilia</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<h2 id="u4E3B_u9898_u4F18_u5316"><a href="#u4E3B_u9898_u4F18_u5316" class="headerlink" title="主题优化"></a>主题优化</h2><h3 id="u6DFB_u52A0_u201C_u5173_u4E8E_u201D"><a href="#u6DFB_u52A0_u201C_u5173_u4E8E_u201D" class="headerlink" title="添加“关于”"></a>添加“关于”</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">"about"</span></span><br></pre></td></tr></table></figure>
+<p>编辑<code>hexo/source/about/index.md</code>，<br>编辑<code>hexo/themes/yilia/_config.yml</code>，添加如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#20851;&#20110;: /about</span><br></pre></td></tr></table></figure></p>
+<h3 id="u6DFB_u52A0RSS"><a href="#u6DFB_u52A0RSS" class="headerlink" title="添加RSS"></a>添加RSS</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --sava</span><br></pre></td></tr></table></figure>
+<p>注意，后面的参数–save绝对不能省，否则该插件信息不会写入package.json。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure></p>
+<p>查看public文件夹，可以看到atom.xml文件。<br>添加sitemap<br>npm install hexo-generator-sitemap –save。<br>hexo clean，hexo g，查看public文件夹，可以看到sitemap.xml文件。<br>sitemap的初衷是给搜索引擎看的，为了提高搜索引擎对自己站点的收录效果，我们最好手动到google和百度等搜索引擎提交sitemap.xml。<br>添加多说<br><a href="http://duoshuo.com/" target="_blank" rel="external">http://duoshuo.com/</a> ，注册一个账号。登录，添加新站点voidking。<br>在工具，获取代码界面，可以看到通用代码：</p>
+<!-- 多说评论框 start -->
+<pre><code>&lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;请将此处替换成文章在你的站点中的ID&quot; data-title=&quot;请替换成文章的标题&quot; data-url=&quot;请替换成文章的网址&quot;&gt;&lt;/div&gt;
+</code></pre><!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<p><script type="text/javascript"><br>var duoshuoQuery = {short_name:”voidking”};<br>    (function() {<br>        var ds = document.createElement(‘script’);<br>        ds.type = ‘text/javascript’;ds.async = true;<br>        ds.src = (document.location.protocol == ‘https:’ ? ‘https:’ : ‘http:’) + ‘//static.duoshuo.com/embed.js’;<br>        ds.charset = ‘UTF-8’;<br>        (document.getElementsByTagName(‘head’)[0]<br>         || document.getElementsByTagName(‘body’)[0]).appendChild(ds);<br>    })();<br>    </script><br><!-- 多说公共JS代码 end --><br>var duoshuoQuery = {short_name:”voidking”};中的voidking，就是我们要用到的duoshuo-key，也有人称之为duoshuo_shortname。<br>打开hexo/themes/yilia/layout/_partial/post/duoshuo.ejs，可以看到：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"duoshuo"</span>&gt;</span><br><span class="line">	<span class="xml"><span class="comment">&lt;!-- 多说评论框 start --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ds-thread"</span> <span class="attribute">data-thread-key</span>=<span class="value">"&lt;%=key%&gt;"</span> <span class="attribute">data-title</span>=<span class="value">"&lt;%=title%&gt;"</span> <span class="attribute">data-url</span>=<span class="value">"&lt;%=url%&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- 多说评论框 end --&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">	<span class="keyword">var</span> duoshuoQuery = &#123;short_name:<span class="string">"&lt;%=theme.duoshuo%&gt;"</span>&#125;;</span><br><span class="line">	(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">		ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</span><br><span class="line">		ds.src = (<span class="built_in">document</span>.location.protocol == <span class="string">'https:'</span> ? <span class="string">'https:'</span> : <span class="string">'http:'</span>) + <span class="string">'//static.duoshuo.com/embed.js'</span>;</span><br><span class="line">		ds.charset = <span class="string">'UTF-8'</span>;</span><br><span class="line">		(<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>]</span><br><span class="line">		 || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</span><br><span class="line">	&#125;)();</span><br><span class="line">	</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- 多说公共JS代码 end --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>我们需要填入的，是&lt;%=theme.duoshuo%&gt;的值，那么，在哪里填入呢？在hexo/themes/yilia/_config.yml文件中。<br>是这样的，我们可以认为，_config.yml就是theme，而在_config.yml中写入duoshuo: voidking，就是给duoshuo赋值为voidking。<br>当然，你也可以直接在duoshuo.ejs中把&lt;%=theme.duoshuo%&gt;替换为voidking。但是不建议这么做，因为这样破坏了作者可复用性设计。<br>添加头像<br>在hexo/themes/yilia/source/img中添加一个图片headportrait.jpg，然后编辑hexo/themes/yilia/_config.yml：<br>1<br>2</p>
+<p>#你的头像url<br>avatar: “img/headportrait.jpg”<br>添加favicon<br>使用Axialis IconWorkshop，制作一个16X16的favicon.png。放置到hexo/themes/yilia/source中，然后编辑hexo/themes/yilia/_config.yml：<br>1<br>favicon: /favicon.png<br>添加好之后，本地测试，只有主页会显示favicon，其他页面不显示，不知道是什么原因。<br>找了很久没找到解决办法，狠了狠心，直接上传。惊奇地发现，上传到gitcafe之后，所有页面都可以显示favicon。<br>archieves数量<br>要修改hexo主题，多少要懂得一点hexo的结构和原理。<br>全局配置文件hexo/_config.yml中有这么一段：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">per_page: 5&#10;pagination_dir: page</span><br></pre></td></tr></table></figure></p>
+<p>这里的per_page，同时设置index、archive、tag、categoriy。如果想要单独设置，可以这么写：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  per_page: 5&#10;&#10;archive_generator:&#10;  per_page: 200&#10;  yearly: true  &#10;  monthly: true&#10;&#10;tag_generator:&#10;  per_page: 10&#10;&#10;category_generator:&#10;  per_page: 10&#10;Categories</span><br></pre></td></tr></table></figure></p>
+<p>Litten大哥，你这不要Categories是什么节奏？修改起来，非常不容易哇！<br>需要修改的文件有hexo/themes/yilia/source/js/main.js，hexo/themes/yilia/source/css/_partial/main.styl，hexo/themes/yilia/layout/_partial/left-col.ejs。也许还有别的文件，修改了一下午，以失败告终。。。<br>总之，还是能力不够，看来得找时间系统学习一下hexo主题的制作了。。。先放着吧！<br>添加文章目录<br>TOC (Table of contents) ，中文翻译做目录。之前用jacman，感觉目录很方便，可以很快定位文章内容，尤其对于长文章来说。但是，yilia貌似没有集成，那就自己添加吧！查找资料，居然找到了好友twiceYuan的写的教程，世界真小哇！<br>详情请访问参考文档，摘录twiceYuan的教程如下：<br>修改article.ejs<br>打开hexo/themes/yilia/layout/_partial/article.ejs，在&lt;%- post.content %&gt;前面插入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;% if(post.toc !== false)&#123; %&#62;&#10;&#9;&#60;div id=&#34;toc&#34; class=&#34;toc-article&#34;&#62;&#10;&#9;  &#60;strong class=&#34;toc-title&#34;&#62;&#25991;&#31456;&#30446;&#24405;&#60;/strong&#62;&#10;&#9;  &#60;%- toc(post.content) %&#62;&#10;&#9;&#60;/div&#62;&#10;&#60;%&#125;%&#62;</span><br></pre></td></tr></table></figure></p>
+<p>这里加了一个post.toc的判断，也就是说，只有在启用toc的post会出现目录，而不是每篇文章都出现。<br>修改article.yml<br>打开hexo/themes/yilia/layout/source/css/_partial/article.yml，在最后插入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/*toc*/&#10;.toc-article&#10;  background #eeeeee&#10;  margin 2em 0 0 0.2em&#10;  padding 1em&#10;  border-radius 5px&#10;  .toc-title&#10;    font-size 120%&#10;  strong&#10;    padding 0.3em 1&#10;ol.toc&#10;  width 100%&#10;  margin 1em 2em 0 0&#10;#toc&#10;  line-height 1em&#10;  font-size 0.8em&#10;  float right&#10;  .toc&#10;    padding 0&#10;    li&#10;      list-style-type none&#10;  .toc-child&#10;    padding-left 0em&#10;#toc.toc-aside&#10;  display none&#10;  width 13%&#10;  position fixed&#10;  right 2%&#10;  top 320px&#10;  overflow hidden&#10;  line-height 1.5em&#10;  font-size 1em&#10;  color color-heading&#10;  opacity .6&#10;  transition opacity 1s ease-out&#10;  strong&#10;    padding 0.3em 0&#10;    color color-font&#10;  &#38;:hover&#10;    transition opacity .3s ease-out&#10;    opacity 1&#10;  a&#10;    transition color 1s ease-out&#10;    &#38;:hover&#10;      color color-theme&#10;      transition color .3s ease-out</span><br></pre></td></tr></table></figure></p>
+<p>使用<br>编辑.md文档，如果要使用文章目录，就要文章开头添加toc属性并且设置为true。</p>
+<figure class="highlight"><figcaption><span>hexo主题优化</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">date: 2015-05-31 16:22:12&#10;tags:&#10;categories: &#35774;&#35745;&#24320;&#21457;&#10;toc: true</span><br></pre></td></tr></table></figure>
+<p>新的问题<br>小伙伴很靠谱，这个方法可用！但是，新的问题来了，文章目录特别紧凑，不够人性化，应该是因为主题差别。于是，参考格式良好的css文件，改写了article.styl的/<em>toc</em>/部分：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/*toc*/&#10;.toc-article&#123;&#10;  background #eee&#10;  margin 0 0 0 0.2em&#10;  padding 1em&#10;  border-radius 5px&#10;  -webkit-border-radius 5px&#10;  strong&#123;&#10;&#9;padding 0.3em 0&#10;  &#125;&#10;&#125;  &#10;#toc&#123;&#10;  line-height 1.5em&#10;  font-size 1em&#10;  float right&#10;  ol&#123;&#10;&#9;margin-left: 0&#10;  &#125;&#10;  .toc&#123;&#10;&#9;padding 0&#10;&#9;li&#123;&#10;&#9;  list-style-type none&#10;&#9;&#125;  &#10;  &#125;    &#10;  .toc-child&#123;&#10;&#9;padding-left 1.5em&#10;  &#125;&#10;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>问题完美解决，看来，不同的theme，添加TOC的时候，确实需要个性定制。<br>奇怪现象<br>添加目录后，出现了一个奇怪的现象：如果一篇文章在主页展示全部内容，也就是没有添加<!--more-->，那么，该文章就会自动生成目录，无论文章中有没有添加toc属性。<br>且不去管它，等到技术更加牛逼了再来处理。……等一下，貌似有了灵感，修改article.ejs如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;% if(post.toc &#38;&#38; post.toc !== false)&#123; %&#62;&#10;&#9;&#60;div id=&#34;toc&#34; class=&#34;toc-article&#34;&#62;&#10;&#9;  &#60;strong class=&#34;toc-title&#34;&#62;&#25991;&#31456;&#30446;&#24405;&#60;/strong&#62;&#10;&#9;  &#60;%- toc(post.content) %&#62;&#10;&#9;&#60;/div&#62;&#10;&#60;%&#125;%&#62;</span><br></pre></td></tr></table></figure></p>
+<p>修改完成，执行命令：<br>hexo clean，hexo g，hexo s。<br>查看效果，主页目录没有了，Perfect！<br>书写代码块<br>一直以来，写博客的时候，如果用到代码块，都是用三个反引号包围。现在发现，似乎出现了问题。如果连续两个代码块，那么，经常出现一种情况：判断代码块不准确，两个代码块被当成了一个代码块。<br>而如果代码块使用缩进一个TAB的方法，那么，代码块前面就会没有行号。<br>。。。麻烦的问题，且不去管它。。。<br>文章模板<br>打开hexo/scaffolds/post.md，可以看到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;&#10;date: &#123;&#123; date &#125;&#125;&#10;tags:&#10;---</span><br></pre></td></tr></table></figure></p>
+<p>如果我们想要在每次生成.md文件的时候，自动生成categories和toc，可以修改如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;&#10;date: &#123;&#123; date &#125;&#125;&#10;tags:&#10;categories:&#10;toc: true&#10;---</span><br></pre></td></tr></table></figure></p>
+<p>参考文档<br>hexo博客的优化技巧续<br><a href="http://zipperary.com/2013/06/02/hexo-guide-5/" target="_blank" rel="external">http://zipperary.com/2013/06/02/hexo-guide-5/</a><br>如何在谷歌站长工具提交网站地图sitemap.xml<br><a href="http://jingyan.baidu.com/article/066074d669a958c3c31cb076.html" target="_blank" rel="external">http://jingyan.baidu.com/article/066074d669a958c3c31cb076.html</a><br>Hexo 3.0 静态博客使用指南<br><a href="http://segmentfault.com/a/1190000002592993" target="_blank" rel="external">http://segmentfault.com/a/1190000002592993</a><br>hexo你的博客<br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">http://ibruce.info/2013/11/22/hexo-your-blog/</a><br>twiceYuan：为Hexo添加文章目录</p>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+		
+	
+		
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+			
+		
+		
+			
+		
+	
+		
+		
+	
+		
+		
+	
+	
+	
+		<li class="prev"><a href="/wiki/2016/01/06/Hexo-theme/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/wiki/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next"><a href="/wiki/2016/01/06/Hexo-setup/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+   Aphelou &copy; 2016
+  
+       Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.
+</p>
+ </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/wiki/js/jquery.imagesloaded.min.js"></script>
+<script src="/wiki/js/gallery.js"></script>
+<script src="/wiki/js/bootstrap.min.js"></script>
+<script src="/wiki/js/jquery.tableofcontents.min.js"></script>
+<script src="/wiki/js/tocgenerator.min.js"></script>
+<script src="/wiki/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/wiki/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/wiki/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+</body>
+</html>
