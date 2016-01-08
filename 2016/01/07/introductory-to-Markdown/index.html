@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>introductory-to-Markdown | Kepler</title>
+  <meta name="author" content="Aphelou">
+  
+  <meta name="description" content="写一篇文章，对自己碰到的Markdown做一个总结，持续跟新">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="introductory-to-Markdown"/>
+  <meta property="og:site_name" content="Kepler"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/wiki/atom.xml" title="Kepler" type="application/atom+xml">
+  
+  
+    <link href="/wiki/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/wiki/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/sidenav.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/wiki/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-71920548-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/wiki/">Kepler</a><span class="split"></span><span class="title">introductory-to-Markdown</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 01-07-2016</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
+	<!-- toc -->
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+ 		   generateWikiTOC('.note', '.toc',  2 , 2 );
+		});
+</script>
+  </div><!-- col-md-3 -->
+  
+  
+
+  
+  <div class="col-xs-12 col-sm-9 col-md-9 note">
+	
+
+	  <!-- content -->
+	  <a id="more"></a>
+<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p><strong>使用Markdown写博客已经三个月了，对这个标记语言很是喜欢。现在流行的教程，要么就是太复杂太难以理解，要么就是太简单太肤浅，稍微高级点的用法没有提及。本文的初衷就是用最容易理解的方式，把Markdown入门到高级用法一一介绍给读者。看完之后，你不仅可以开始使用Markdown写东西，在日常使用中也随时可以打开这篇博客参考各种用法。</strong></p>
+<p><em>为什么学习Markdown？</em><br>别问为什么，尽管学习就好了。这么简单的东西，一会就能学会，受益可能终生，太值了。</p>
+<p><strong>怎么学习Markdown？</strong><br>  我认为最好的方法是通过示例，本文正式采用这样的方法。<br><em>在哪可以使用Markdown？</em> 你可以在<a href="/wiki/www.jianshu.com">简书</a>、<a href="http://logdown.com/" target="_blank" rel="external">Logdown</a>这样的免费平台用Markdown写博客。如果你愿意折腾，也可以像我一样，使用hexo搭建自己的博客，并用Markdown书写博客。</p>
+<p><strong>怎样开始？</strong><br>打开这个<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">网址</a>，把下面学到的东西在这个里面练习。左侧是Markdown，右侧是实时的显示。    </p>
+<p><strong>还要注意什么？</strong><br>一个效果，有时候可以通过不同的方式生成，比如无序列表可以用<code>- + *</code>。本文从实践出发，只列举最好用的一种。读者也只需要学习一种。</p>
+<p>以下是Markdown代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#&#36825;&#37324;&#26159;&#19968;&#32423;&#26631;&#39064;&#10;###&#36825;&#37324;&#26159;&#19977;&#32423;&#26631;&#39064;&#10;######&#36825;&#37324;&#26159;&#20845;&#32423;&#26631;&#39064;&#65292;&#23601;&#21040;&#36825;&#37324;&#20102;&#65292;&#26408;&#26377;&#19971;&#32423;&#65281;&#10;&#10;&#10;&#10;&#27573;&#33853;&#21069;&#38754;&#27809;&#26377;&#32553;&#36827;&#65292;&#30475;&#21040;&#20102;&#21543;&#12290;&#10;&#10;&#12288;&#12288;&#35201;&#24819;&#20351;&#29992;&#32553;&#36827;&#65292;&#22312;&#20013;&#25991;&#36755;&#20837;&#27861;&#20013;&#25913;&#25104;&#12300;&#20840;&#35282;&#12301;&#36755;&#20837;&#65292;&#20877;&#25353;&#20004;&#20010;&#31354;&#26684;&#10;&#10;&#34892;&#23614;&#19968;&#20010;&#22238;&#36710;&#25442;&#34892;&#65292;&#26174;&#31034;&#25928;&#26524;&#20381;&#28982;&#26159;&#26159;&#19968;&#34892;&#12290;&#10;&#25105;&#35828;&#30340;&#23545;&#21543;~&#10;&#10;&#24819;&#35201;&#20998;&#25104;&#20004;&#34892;&#65292;&#38656;&#35201;&#22312;&#34892;&#23614;&#36755;&#20837;&#20004;&#20010;&#31354;&#26684;&#12290;  &#10;&#25105;&#35828;&#30340;&#23545;&#21543;~&#10;&#10;&#24819;&#35201;&#24320;&#22987;&#19968;&#20010;&#26032;&#30340;&#27573;&#33853;&#65292;&#20054;&#20054;&#30340;&#25353;&#20004;&#19979;&#22238;&#36710;&#21543;&#10;&#10;&#25105;&#35828;&#30340;&#23545;&#21543;~&#10;&#10;&#10;&#10;&#10;**&#20004;&#20010;&#26143;&#21495;&#21253;&#22260;&#30340;&#26159;&#31895;&#20307;**&#10;&#10;*&#19968;&#20010;&#26143;&#21495;&#21253;&#22260;&#30340;&#26159;&#26012;&#20307;*&#10;&#10;&#62; &#24341;&#29992;&#20869;&#23481;&#65292;&#22810;&#34892;&#30340;&#35805;&#65292;&#29992;&#20004;&#20010;&#31354;&#26684;&#32467;&#23614;&#21543;  &#10;&#26159;&#21543;~&#10;&#10;&#10;&#10;`&#21453;&#24341;&#21495;&#21253;&#22260;&#30340;&#26159;&#34892;&#20869;&#20195;&#30721;`&#65292;&#36825;&#20010;&#25353;&#38190;&#22312;&#12300;Tab&#12301;&#19978;&#36793;&#10;&#10;``&#23884;&#22871;&#30340;&#35805;&#65292;&#21487;&#20197;&#20351;&#29992;`&#20004;&#20010;&#21452;&#24341;&#21495;`&#23884;&#22871;&#22312;&#22806;&#38754;``&#10;&#10;```python&#10;#&#19977;&#20010;&#21453;&#24341;&#21495;&#21253;&#22260;&#30340;&#26159;&#20195;&#30721;&#22359;&#12290;&#10;#&#20250;&#26174;&#31034;&#34892;&#21495;&#12290;&#10;#&#20063;&#26377;&#39640;&#20142;&#26174;&#31034;&#10;#&#25105;&#19978;&#38754;&#21152;&#20102;python&#65292;&#20320;&#20063;&#21487;&#20197;&#19981;&#21152;&#12290;&#22914;&#26524;&#19981;&#33021;&#39640;&#20142;&#65292;&#37027;&#20040;&#36824;&#26159;&#21152;&#19978;&#21543;&#12290;&#12290;&#21478;&#22806;&#65292;&#22914;&#26524;&#20320;&#30340;&#20195;&#30721;&#22359;&#21253;&#22260;&#30340;&#26159;html&#65292;&#37027;&#20320;&#24212;&#35813;&#20889;html&#32780;&#19981;&#26159;python&#10;import os&#10;print os.sep&#10;&#10;&#23884;&#22871;&#30340;&#35805;&#65292;&#21487;&#20197;&#20351;&#29992;&#20845;&#20010;&#21453;&#24341;&#21495;&#23884;&#22871;&#22312;&#22806;&#38754;&#12290;&#10;&#10;1. &#26377;&#24207;&#21015;&#34920;1&#65292;&#27880;&#24847;&#28857;&#20043;&#21518;&#30340;&#31354;&#26684;&#12290;&#10;2. &#26377;&#24207;&#21015;&#34920;2.&#10;1. &#25105;&#36825;&#37324;&#20889;&#25104;1&#65292;&#22312;&#26174;&#31034;&#26102;&#36824;&#26159;3&#65292;&#21385;&#23475;&#19981;&#12290;&#10;&#10;1. &#26377;&#24207;&#21015;&#34920;1&#10; &#35814;&#32454;&#20869;&#23481;&#65292;&#27880;&#24847;&#21069;&#38754;&#26377;&#19968;&#20010;&#31354;&#26684;&#10;2. &#26377;&#24207;&#21015;&#34920;2&#10; &#35814;&#32454;&#20869;&#23481;&#10;&#10;- &#26080;&#24207;&#21015;&#34920;1&#10;- &#26080;&#24207;&#21015;&#34920;2&#10;- &#26080;&#24207;&#21015;&#34920;3&#10; - &#23567;1&#65292;&#27880;&#24847;&#21069;&#38754;&#26377;&#19968;&#20010;&#31354;&#26684;&#10; - &#23567;2&#10;&#10;&#10;&#10;&#36229;&#32423;&#38142;&#25509;&#65306;[&#25105;&#30340;&#21338;&#23458;](http://zipperary.com)&#10;&#10;&#25554;&#20837;&#22270;&#29255;&#65306;![&#22909;&#30475;&#19981;](http://ww2.sinaimg.cn/large/5e8cb366jw1e62o63tkv3j20dh078q5a.jpg)&#10;&#10;&#21478;&#22806;&#65292;markdown&#23436;&#20840;&#20860;&#23481;html&#65292;&#20320;&#21487;&#20197;&#29992;html&#25554;&#20837;&#36825;&#20123;&#19996;&#35199;&#65292;&#20363;&#22914;&#65306;&#10;&#10;&#60;iframe height=498 width=510 src=&#34;http://player.youku.com/embed/XMjI2MjU3MDMy&#34; frameborder=0 allowfullscreen&#62;&#60;/iframe&#62;&#10;&#10;&#10;~~&#21024;&#38500;&#32447;~~&#10;&#10;&#10;&#20998;&#21106;&#32447;&#29992;`---`&#65292;&#27880;&#24847;&#21333;&#29420;&#19968;&#26679;&#65292;&#19978;&#38754;&#24517;&#39035;&#26159;&#19968;&#20010;&#31354;&#34892;&#10;&#10;---&#10;&#10;&#26356;&#22810;&#39640;&#32423;&#30340;&#26684;&#24335;&#65292;&#35831;&#26524;&#26029;&#25554;&#20837;html&#26631;&#31614;</span><br></pre></td></tr></table></figure></p>
+<p>以下到结尾处是效果：</p>
+<p>#这里是一级标题</p>
+<p>###这里是三级标题</p>
+<p>######这里是六级标题，就到这里了，木有七级！</p>
+<p>段落前面没有缩进，看到了吧。</p>
+<p>　　要想使用缩进，在中文输入法中改成「全角」输入，再按两个空格</p>
+<p>行尾一个回车换行，显示效果依然是是一行。<br>我说的对吧~</p>
+<p>想要分成两行，需要在行尾输入两个空格。<br>我说的对吧~</p>
+<p>想要开始一个新的段落，乖乖的按两下回车吧</p>
+<p>我说的对吧~</p>
+<p><strong>两个星号包围的是粗体</strong></p>
+<p><em>一个星号包围的是斜体</em></p>
+<blockquote>
+<p>引用内容，多行的话，用两个空格结尾吧<br>是吧~</p>
+</blockquote>
+<p><code>反引号包围的是行内代码</code>，这个按键在「Tab」上边</p>
+<p><code>嵌套的话，可以使用`两个双引号`嵌套在外面</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#三个反引号包围的是代码块。</span></span><br><span class="line"><span class="comment">#会显示行号。</span></span><br><span class="line"><span class="comment">#也有高亮显示</span></span><br><span class="line"><span class="comment">#我上面加了python，你也可以不加。如果不能高亮，那么还是加上吧。。另外，如果你的代码块包围的是html，那你应该写html而不是python</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">print</span> os.sep</span><br></pre></td></tr></table></figure>
+<p>嵌套的话，可以使用六个反引号嵌套在外面。</p>
+<ol>
+<li>有序列表1，注意点之后的空格。</li>
+<li>有序列表2.</li>
+<li><p>我这里写成1，在显示时还是3，厉害不。</p>
+</li>
+<li><p>有序列表1<br>详细内容，注意前面有一个空格</p>
+</li>
+<li>有序列表2<br>详细内容</li>
+</ol>
+<ul>
+<li>无序列表1</li>
+<li>无序列表2</li>
+<li>无序列表3<ul>
+<li>小1，注意前面有一个空格</li>
+<li>小2</li>
+</ul>
+</li>
+</ul>
+<p>超级链接：<a href="http://zipperary.com" target="_blank" rel="external">我的博客</a></p>
+<p>插入图片：<img src="http://ww2.sinaimg.cn/large/5e8cb366jw1e62o63tkv3j20dh078q5a.jpg" alt="好看不"></p>
+<p>另外，markdown完全兼容html，你可以用html插入这些东西，例如：</p>
+<iframe height="498" width="510" src="http://player.youku.com/embed/XMjI2MjU3MDMy" frameborder="0" allowfullscreen></iframe>
+
+
+<p><del>删除线</del></p>
+<p>分割线用<code>---</code>，注意单独一样，上面必须是一个空行</p>
+<hr>
+<p>更多高级的格式，请果断插入html标签</p>
+<h2 id="Markdown__u62FE_u9057"><a href="#Markdown__u62FE_u9057" class="headerlink" title="Markdown 拾遗"></a>Markdown 拾遗</h2><ol>
+<li><p>删除线。</p>
+<p>方法：在要划删除线的文本前后添加~~  </p>
+<p>示例：<code>~~看《冰与火之歌》~~</code>  </p>
+<p>解析为：<del>看《冰与火之歌》</del></p>
+</li>
+<li><p>代码块中html代码显示不正常，<code>&lt;、&gt;</code>被解析为<code>&amp;gt; &amp;lt</code>;</p>
+<p> 原因：markdown是一个语法规范，具体的解析可以使用不同的程序，而不同程序对规范的完成度也未必相同。hexo 所用的 marked 解析程序，无法对代码块中<code>&lt;、&gt;</code>做正确解析，需要人工矫正。  </p>
+<p> 方法：标明语言类型html  </p>
+<p> 示例：</p>
+</li>
+</ol>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+	
+	
+	
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/wiki/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next disabled"><a>next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+   Aphelou &copy; 2016
+  
+       Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.
+</p>
+ </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/wiki/js/jquery.imagesloaded.min.js"></script>
+<script src="/wiki/js/gallery.js"></script>
+<script src="/wiki/js/bootstrap.min.js"></script>
+<script src="/wiki/js/jquery.tableofcontents.min.js"></script>
+<script src="/wiki/js/tocgenerator.min.js"></script>
+<script src="/wiki/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/wiki/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/wiki/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+</body>
+</html>
